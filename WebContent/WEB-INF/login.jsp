@@ -10,16 +10,13 @@
 </head>
 </head>
 <body>
-<c:import url="inc/entete.jsp"/>
 	<div class="container">
 		<form class="loginForm" method="post">
 
 			<label>Login</label> <br> <input type="text" name="login">
-			<br> 
-			<label>Password</label> <br> <input type="password"
-				name="password">
-				 <br>
-			<input type="submit" value="Se connecter">
+			<br> <label>Password</label> <br> <input type="password"
+				name="password"> <br> <input type="submit"
+				value="Se connecter">
 		</form>
 	</div>
 

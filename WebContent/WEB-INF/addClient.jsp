@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="<c:url value='/style.css'/>">
 </head>
 <body>
-	<c:import url="inc/entete.jsp" />
 	<div>
 		<c:import url="inc/menu.jsp" />
 		<form class="addForm" method="post" action="add">

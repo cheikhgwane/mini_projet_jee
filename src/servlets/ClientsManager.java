@@ -59,8 +59,10 @@ public class ClientsManager extends HttpServlet {
 
 		} else if (requestedUrl.endsWith("clients/modify")) {
 			String _id = request.getParameter("idClient");
+			
 			if(_id==null) {
-				getServletContext().getRequestDispatcher(LIST_VIEW).forward(request, response);
+				response.sendRedirect("add");
+				return;
 			}
 			int idClient = Integer.valueOf(_id);
 			System.out.println(_id);
@@ -72,7 +74,6 @@ public class ClientsManager extends HttpServlet {
 						request.setAttribute("client", c);	
 					}
 				}
-				System.out.println("here");
 				getServletContext().getRequestDispatcher(MODIFY_VIEW).forward(request, response);
 			} catch (DaoException e) {
 				System.out.println(e.getMessage());
@@ -112,7 +113,6 @@ public class ClientsManager extends HttpServlet {
 				try {
 					ClientDao.ajouterClient(client);
 				} catch (DaoException e) {
-					System.out.println(e.getMessage());
 					request.setAttribute("status", "Erreur lors de l'ajout client");
 					getServletContext().getRequestDispatcher(ADD_VIEW).forward(request, response);
 					return;
@@ -139,7 +139,6 @@ public class ClientsManager extends HttpServlet {
 				client.setIdClient(Integer.valueOf(_id));
 				try {
 					ClientDao.updateClient(client);
-					System.out.println("client updated");
 					response.sendRedirect("list");
 				} catch (DaoException e) {
 					System.out.println(e.getMessage());

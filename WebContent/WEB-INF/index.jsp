@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="<c:url value='style.css'/>">
 </head>
 <body>
-	<c:import url="inc/entete.jsp"/>
 	<c:import url="inc/menu.jsp"/>
-	
+	<div style="margin-left:35%">
+	 <img src="<c:url value="customer.png" />" alt="customer" height="500" width="520" />
+	 <c:import url="inc/entete.jsp"/>
+	</div>
 </body>
 </html>

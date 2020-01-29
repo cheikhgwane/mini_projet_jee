@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="<c:url value='/style.css'/>">
 <title>Liste des clients</title>
 </head>
 <body>
-	<jsp:include page="inc/entete.jsp" />
 	<jsp:include page="inc/menu.jsp" />
-
-	<table border="1" cellspacing="0">
+	<div>
+	  <table id="client" border="1">
 
 		<c:if test="${!empty requestScope.clients}">
 			<tr>
@@ -36,6 +36,7 @@
 		</c:if>
 
 	</table>
+	</div>
 
 </body>
 </html>

@@ -10,7 +10,6 @@
 
 </head>
 <body>
-	<c:import url="inc/entete.jsp" />
 	<c:import url="inc/menu.jsp" />
 </body>
 </html>
